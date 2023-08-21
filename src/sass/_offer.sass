@@ -1,11 +1,15 @@
 .offer
     background-color: #F5F0EC
     span
-        font-size: 12px
+        @include font-size(.81rem)
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
     h2
-        font-size: 34px
+        @include font-size(3.6rem)
     p
-        font-size: 14px
+        @include font-size(.88rem)
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
     .offer-cards
         .card
             border: none
@@ -13,13 +17,17 @@
             width: 25px
             margin-left: 15px
         p
-            font-size: 14px
+            @include font-size(.88rem)
             line-height: 18px
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(.92rem)
         a
-            font-size: 12px
+            @include font-size(.78rem)
             color: #1B5B31
             border-bottom: 1px solid #1B5B31
             border-bottom-left-radius: 0
             border-bottom-right-radius: 0
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(.85rem)
             i
                 vertical-align: middle 

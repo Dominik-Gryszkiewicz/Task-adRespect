@@ -2,15 +2,21 @@
     background-color: #1B5B31
     color: #F5F0EC
     span
-        font-size: 12px
+        @include font-size(.81rem)
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
     h2
-        font-size: 34px
+        @include font-size(3.6rem)
     p
-        font-size: 14px
+        @include font-size(.88rem)
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
     button
-        font-size: 14px
+        @include font-size(.88rem)
         color: #F5F0EC
         border: 1px solid #F5F0EC
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
         i
             vertical-align: middle
             font-size: 24px

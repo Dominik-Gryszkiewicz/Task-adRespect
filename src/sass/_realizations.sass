@@ -1,9 +1,11 @@
 .realizations
     background-color: #DCC1AB
     span
-        font-size: 12px
+        @include font-size(.81rem)
+        @media screen and (min-width: 768px) and (orientation: portrait)
+            @include font-size(1rem)
     h2
-        font-size: 34px
+        @include font-size(3.6rem)
     .macy-container
         .more
             display: none

@@ -3,10 +3,20 @@
     .box
         background-color: #1B5B31
         color: #F5F0EC
+        .description1
+            @include font-size(1rem)
+            @media screen and (min-height: 1024px) and (orientation: portrait)
+                @include font-size(1.3rem)
+                width: 75%
+                margin-top: 25px
         .description2
-            font-size: 12px
+            @include font-size(.75rem)
+            @media screen and (min-height: 1024px) and (orientation: portrait)
+                width: 25%
             .btn
-                font-size: 12px
+                @include font-size(.75rem)
+                @media screen and (min-height: 1024px) and (orientation: portrait)
+                    margin-top: .8rem !important
                 a
                     color: #1B5B31
                     text-decoration: none
