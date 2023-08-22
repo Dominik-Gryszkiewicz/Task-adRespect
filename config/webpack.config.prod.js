@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    main: ['./src/index.js', './sass/style.sass'],
+    main: ['./src/index.js', './src/sass/style.sass'],
   },
   output: {
     filename: 'js/[name]-[contenthash].js',
@@ -24,11 +24,11 @@ module.exports = {
         use: [{
           loader: 'postcss-loader',
           options: {
-            plugins: function () {
-              return [
+            postcssOptions: {
+              plugins: [
                 require('precss'),
                 require('autoprefixer')
-              ];
+              ]
             }
           }
         }]
@@ -82,13 +82,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[contenthash].css'
     }),
-    new CopyPlugin(
-      [
+    new CopyPlugin({
+      patterns: [
         {
           from: 'public/images',
           to: 'images'
         }
       ]
-    )
+    })
   ]
 }
