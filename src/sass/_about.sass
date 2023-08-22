@@ -1,22 +1,69 @@
 .about
     background-color: #1B5B31
     color: #F5F0EC
-    span
-        @include font-size(.81rem)
-        @media screen and (min-width: 768px) and (orientation: portrait)
-            @include font-size(1rem)
-    h2
-        @include font-size(3.6rem)
-    p
-        @include font-size(.88rem)
-        @media screen and (min-width: 768px) and (orientation: portrait)
-            @include font-size(1rem)
-    button
-        @include font-size(.88rem)
-        color: #F5F0EC
-        border: 1px solid #F5F0EC
-        @media screen and (min-width: 768px) and (orientation: portrait)
-            @include font-size(1rem)
-        i
-            vertical-align: middle
-            font-size: 24px
+    .about-photo
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            width: 50%
+            img
+                height: 100%
+    .about-description
+        @media screen and (min-width: 440px) and (orientation: landscape)
+            margin-top: 6rem
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            width: 50%
+            padding: 5rem !important
+            padding-left: 6rem !important
+            margin-top: 1rem
+        @media screen and (min-width: 1366px) and (orientation: landscape)
+            margin-top: 3rem
+            padding-right: 6rem !important
+        @media screen and (min-width: 1440px) and (orientation: landscape)
+            margin-top: 4.5rem
+            padding-left: 7rem !important
+        @media screen and (min-width: 1536px) and (orientation: landscape)
+            margin-top: 6rem
+            padding-left: 8rem !important
+        @media screen and (min-width: 1920px) and (orientation: landscape)
+            margin-top: 12rem
+            padding-left: 12rem !important
+        span
+            @include font-size(.81rem)
+            font-family: 'Inter', sans-serif
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(1rem)
+        h2
+            @include font-size(3.6rem)
+            @media screen and (min-width: 1280px) and (orientation: landscape)
+                @include font-size(2.8rem)
+                padding-right: 13rem
+            @media screen and (min-width: 1366px) and (orientation: landscape)
+                padding-right: 15rem
+            @media screen and (min-width: 1440px) and (orientation: landscape)
+                padding-right: 17rem
+            @media screen and (min-width: 1536px) and (orientation: landscape)
+                padding-right: 19rem
+            @media screen and (min-width: 1600px) and (orientation: landscape)
+                padding-right: 21rem
+            @media screen and (min-width: 1920px) and (orientation: landscape)
+                padding-right: 30rem
+        p
+            @include font-size(.88rem)
+            font-family: 'Inter', sans-serif
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(1rem)
+            @media screen and (min-width: 1536px) and (orientation: landscape)
+                width: 90%
+        a
+            @include font-size(.88rem)
+            font-family: 'Inter', sans-serif
+            color: #F5F0EC
+            border: 1px solid #F5F0EC
+            transition: color .3s, background-color .3s
+            &:hover
+                color: #1B5B31
+                background-color: #F5F0EC
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(1rem)
+            i
+                vertical-align: middle
+                font-size: 24px

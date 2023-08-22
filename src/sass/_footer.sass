@@ -1,9 +1,13 @@
 footer
     background-color: #000
     color: #F5F0EC
+    font-family: 'Inter', sans-serif
     .footer-description
         border-bottom: 1px solid #F5F0EC
         padding-bottom: 30px
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            padding-bottom: 50px
+            padding-top: 20px
         a
             color: #F5F0EC
             text-decoration: none
@@ -15,6 +19,10 @@ footer
                 background-color: #1B5B31
                 color: #F5F0EC
                 padding: 10px 20px
+                transition: background-color .3s, border-color .3s
+                &:hover
+                    background-color: #000
+                    border-color: #F5F0EC
     .footer-navigation
         padding-top: 30px
         ul

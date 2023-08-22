@@ -9,4 +9,5 @@ btn.addEventListener('click', () => {
     })
     overlay.style.display = 'none';
     macyInstance.reInit();
+    window.scrollBy(0, 500);
 })

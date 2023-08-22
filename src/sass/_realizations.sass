@@ -1,11 +1,24 @@
 .realizations
     background-color: #DCC1AB
-    span
-        @include font-size(.81rem)
-        @media screen and (min-width: 768px) and (orientation: portrait)
-            @include font-size(1rem)
-    h2
-        @include font-size(3.6rem)
+    .realizations-description
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            margin-left: 7rem
+        @media screen and (min-width: 1366px) and (orientation: landscape)
+            margin-left: 8.5rem
+        @media screen and (min-width: 1440px) and (orientation: landscape)
+            margin-left: 8rem
+        @media screen and (min-width: 1600px) and (orientation: landscape)
+            margin-left: 10rem
+        @media screen and (min-width: 1920px) and (orientation: landscape)
+            margin-left: 23rem
+        span
+            @include font-size(.81rem)
+            font-family: 'Inter', sans-serif
+            color: #1B5B31
+            @media screen and (min-width: 768px) and (orientation: portrait)
+                @include font-size(1rem)
+        h2
+            @include font-size(2.8rem)
     .macy-container
         .more
             display: none
@@ -20,4 +33,8 @@
             transform: translateX(-50%)
             top: 85%
             font-size: 14px
+            transition: background-color .3s, border-color .3s
+            &:hover
+                background-color: #1B5B31
+                border-color: #1B5B31
 

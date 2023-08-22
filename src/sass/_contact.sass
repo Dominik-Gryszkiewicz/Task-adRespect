@@ -3,20 +3,42 @@
     .box
         background-color: #1B5B31
         color: #F5F0EC
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            padding: 6rem 4rem !important
+        @media screen and (min-width: 1440px) and (orientation: landscape)
+            padding: 6rem !important
         .description1
             @include font-size(1rem)
+            p
+                span
+                    font-family: 'Inter', sans-serif
             @media screen and (min-height: 1024px) and (orientation: portrait)
                 @include font-size(1.3rem)
                 width: 75%
                 margin-top: 25px
+            @media screen and (min-width: 1280px) and (orientation: landscape)
+                @include font-size(1.5rem)
+                margin-top: 17px
+            @media screen and (min-width: 1536px) and (orientation: landscape)
+                @include font-size(1.7rem)
+                margin-top: 10px
         .description2
             @include font-size(.75rem)
+            font-family: 'Inter', sans-serif
             @media screen and (min-height: 1024px) and (orientation: portrait)
                 width: 25%
             .btn
                 @include font-size(.75rem)
+                font-family: 'Inter', sans-serif
+                transition: background-color .3s
+                &:hover
+                    background-color: #1B5B31
+                &:hover a
+                    color: #F5F0EC
                 @media screen and (min-height: 1024px) and (orientation: portrait)
                     margin-top: .8rem !important
                 a
                     color: #1B5B31
                     text-decoration: none
+                    transition: color .3s
+                        

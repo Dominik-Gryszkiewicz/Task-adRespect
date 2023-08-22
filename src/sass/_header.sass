@@ -7,6 +7,10 @@
             h1
                 @include font-size(4rem)
                 font-weight: 500
+                @media screen and (min-width: 1280px) and (orientation: landscape)
+                    @include font-size(3.5rem)
+                @media screen and (min-width: 1920px) and (orientation: landscape)
+                    @include font-size(5rem)
             p
                 font-family: Inter
                 @include font-size(.88rem)
@@ -16,25 +20,65 @@
                     @include font-size(1.2rem)
                     padding-top: 2rem !important
                     padding-bottom: 2rem !important
-            button
+                @media screen and (min-width: 1280px) and (orientation: landscape)
+                    padding-top: 2rem !important
+                    width: 85%
+                @media screen and (min-width: 1440px) and (orientation: landscape)
+                    @include font-size(1rem)
+                @media screen and (min-width: 1920px) and (orientation: landscape)
+                    @include font-size(1.2rem)
+            a
                 @include font-size(.88rem)
                 padding: 10px 20px
+                font-family: 'Inter', sans-serif
                 @media screen and (min-width: 768px) and (orientation: portrait)
                     @include font-size(1.09rem)
                 @media screen and (min-width: 800px) and (orientation: portrait)
                     @include font-size(1.2rem)
+                @media screen and (min-width: 1440px) and (orientation: landscape)
+                    @include font-size(1rem)
+                @media screen and (min-width: 1920px) and (orientation: landscape)
+                    @include font-size(1.2rem)
+                    padding: 15px 25px
             .btn-contact
                 background-color: #1B5B31
                 color: #F5F0EC
+                transition: color .3s, border-color .3s, background-color .3s
+                &:hover
+                    color: #1B5B31
+                    border-color: #1B5B31
+                    background-color: #DCC1AB
             .btn-realisation
                 color: #1B5B31
                 border-color: #1B5B31
+                transition: color .3s, background-color .3s
+                &:hover
+                    color: #F5F0EC
+                    background-color: #1B5B31
             .header-description
                 @media screen and (min-width: 768px) and (orientation: portrait)
                     padding-left: 5rem !important
                     padding-right: 5rem !important
+                @media screen and (min-height: 844px) and (orientation: portrait)
+                    padding-left: 2rem !important
+                    padding-right: 2rem !important
+                @media screen and (min-height: 896px) and (orientation: portrait)
+                    padding-left: 2.5rem !important
+                    padding-right: 2.5rem !important
                 @media screen and (min-height: 1280px) and (orientation: portrait)
                     padding-top: 5rem !important
+                @media screen and (min-width: 1280px) and (orientation: landscape)
+                    width: 50%
+                    padding-left: 4.5rem !important
+                    padding-right: 5rem !important
+                    margin-top: 3rem !important
+                @media screen and (min-width: 1366px) and (orientation: landscape)
+                    margin-top: 5rem !important
+                @media screen and (min-width: 1440px) and (orientation: landscape)
+                    margin-top: 8rem !important
+                @media screen and (min-width: 1920px) and (orientation: landscape)
+                    padding-left: 7rem !important
+                    
             .header-photo-container
                 position: absolute
                 top: 70%
@@ -55,14 +99,26 @@
                     top: 52%
                 @media screen and (min-height: 1180px) and (orientation: portrait)
                     top: 50%
+                @media screen and (min-width: 1280px) and (orientation: landscape)
+                    top: 0
+                    left: 50%
                 
     .carousel-control-prev,
     .carousel-control-next
         background-color: #F5F0EC
         opacity: 1
         top: 93%
+        @media screen and (min-width: 601px) and (orientation: portrait)
+            width: 12%
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            width: 5%
+            top: 90%
     .carousel-control-prev
         left: 70%
+        @media screen and (min-width: 1280px) and (orientation: landscape)
+            left: 90%
+        @media screen and (min-width: 601px) and (orientation: portrait)
+            left: 76%
     .carousel-control-prev-icon
         background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/></svg>')
     .carousel-control-next-icon
